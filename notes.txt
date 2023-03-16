@@ -1,0 +1,19 @@
+filter method removeFromArray
+the spread operator '...' converts arguments into an array of arguments and makes possible pass
+all arguments that we want.
+
+var removeFromArray = function(array, ...args) {
+    return array.filter(val => !args.includes(val))
+}
+
+instead of 
+removeFromArray(array, ...args){
+
+    let newArray = []
+    array.forEach(item =>{
+        if(!args.includes(item) {
+           newArray.push(item);
+        }
+    })
+    return newArray;
+}
